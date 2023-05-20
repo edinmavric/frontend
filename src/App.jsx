@@ -1,7 +1,17 @@
 import './App.css';
+import News from './Components/News/News';
 
-function App() {
-  return <><h1>Hello World!</h1></>;
-}
+const App = () => {
+  return (
+    <>
+      <News />
+      {/* main novost/selectovana novost
+          -leva strana sirina 60% sa tekstom-
+          desne novosti/sticky odvojen overflow
+          -sirine 40% samo title and img-
+      */}
+    </>
+  );
+};
 
 export default App;
