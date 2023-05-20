@@ -1,28 +1,20 @@
 import './SecondaryNews.css';
 import NewsItem from './NewsItem';
 
-const SecondaryNews = ({ onNewsItemClick }) => {
-  const newsItems = [
-    {
-      id: 1,
-      title: 'News 1',
-      date: '2023-05-19',
-    },
-    {
-      id: 2,
-      title: 'News 2',
-      date: '2023-05-18',
-    },
-  ];
-
+const SecondaryNews = ({ newsItems, onNewsItemClick, selectedNews }) => {
   const handleNewsItemClick = news => {
     onNewsItemClick(news);
   };
 
   return (
-    <div className="Secondary-News">
+    <div className="Secondary-News__Container">
       {newsItems.map(news => (
-        <NewsItem key={news.id} news={news} onClick={handleNewsItemClick} />
+        <NewsItem
+          key={news.id}
+          news={news}
+          active={selectedNews.id === news.id}
+          onClick={handleNewsItemClick}
+        />
       ))}
     </div>
   );

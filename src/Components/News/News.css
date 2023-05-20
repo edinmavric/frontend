@@ -1,5 +1,113 @@
 .News {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.News-Main {
+  width: 50%;
+}
+.News-Main h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.Secondary-News__Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 33%;
+  height: 500px;
+}
+.News-Item {
+  display: flex;
+  flex-direction: column;
+  margin: 6px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.News-Item.active {
+  color: purple;
+  background-color: #f1f1f1;
+}
+.News-Item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.News-Item p {
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.News-Main__Container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 500px;
+  padding: 20px;
+  color: #121212;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin-top: 6px;
+}
+.News-Main__Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.News-Main__Container p svg {
+  margin-right: 6px;
+}
+.News-Main__Overlay h2 {
+  font-size: 32px;
+}
+.News-Main p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: 80%;
+}
+.News-Item__Image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 100%;
+}
+.News-Item__Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.News-Item.active,
+.News-Item.active .News-Item__Overlay {
+  color: purple
 }
